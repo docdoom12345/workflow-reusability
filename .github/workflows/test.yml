@@ -1,9 +1,13 @@
 name: Test Workflow
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call: # Define the `on.workflow_call` trigger
+    inputs:
+      branch: # Define any input parameters needed (optional)
+        description: 'The branch to trigger the workflow'
+        required: true
+        default: 'main'
+        type: string
 
 jobs:
   test_job:
