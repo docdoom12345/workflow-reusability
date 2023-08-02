@@ -1,0 +1,20 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Add any additional steps specific to the main workflow here
+
+      # Reuse the test workflow defined in test.yml
+      - name: Test
+        uses: ./.github/workflows/test.yml
