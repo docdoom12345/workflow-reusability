@@ -17,4 +17,4 @@ jobs:
 
       # Reuse the test workflow defined in test.yml
       - name: Test
-        uses: ./.github/workflows/test.yml
+        uses: docdoom12345/workflow-reusability@main/.github/workflows/test.yml
