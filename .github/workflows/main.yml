@@ -6,7 +6,17 @@ on:
       - main
 
 jobs:
-  build_and_test:
+  run_command:
+    name: run command
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+        
+      - name: run command
+        run: |
+          echo "inside main job"
+  reuse_workflow:
     uses: docdoom12345/workflow-reusability/.github/workflows/test.yml@main
     with:
       branch: main
