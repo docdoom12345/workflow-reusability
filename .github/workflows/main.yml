@@ -21,4 +21,4 @@ jobs:
         uses: Monorepo-Actions/config-for-actions@v1.0.0
         with:
           # The configuration files.
-          config_files: ././github/workflows/test.yml
+          config_files: .github/workflows/test.yml
