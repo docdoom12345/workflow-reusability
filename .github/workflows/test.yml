@@ -1,18 +1,11 @@
-name: Test Workflow
+name: Test Job
 
-on:
-  push:
-    branches:
-      - main
+runs-on: ubuntu-latest
 
-jobs:
-  test_job:
-    runs-on: ubuntu-latest
+steps:
+  - name: Checkout code
+    uses: actions/checkout@v2
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Add more steps for the test workflow here
-      - name: run a test command
-        run: echo "calling from test.yml"
+  # Add more steps for the test workflow here
+  - name: test command
+    run: echo "hi"
