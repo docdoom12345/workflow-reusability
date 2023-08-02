@@ -7,11 +7,4 @@ on:
 
 jobs:
   build_and_test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Reuse shared workflow
-        uses: docdoom12345/workflow-reusability/.github/workflows/test.yml@v1
+    uses: docdoom12345/workflow-reusability/.github/workflows/test.yml@v1
