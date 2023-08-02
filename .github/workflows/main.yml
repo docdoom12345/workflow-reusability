@@ -13,7 +13,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Add any additional steps specific to the main workflow here
-
       - name: Reuse shared workflow
         uses: docdoom12345/workflow-reusability/.github/workflows/test.yml@v1
