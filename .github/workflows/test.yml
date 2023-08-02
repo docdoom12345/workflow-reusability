@@ -1,11 +1,14 @@
-name: Test Job
+name: Test Workflow
 
-runs-on: ubuntu-latest
+on:
+  push:
+    branches:
+      - main
 
-steps:
-  - name: Checkout code
-    uses: actions/checkout@v2
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
 
-  # Add more steps for the test workflow here
-  - name: test command
-    run: echo "hi"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
