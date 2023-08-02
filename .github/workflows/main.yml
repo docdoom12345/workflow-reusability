@@ -15,7 +15,7 @@ jobs:
         
       - name: run command
         run: |
-          echo "inside main job"
+          echo "inside main workflow"
   reuse_workflow:
     uses: docdoom12345/workflow-reusability/.github/workflows/test.yml@main
     with:
